@@ -1,0 +1,213 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+.btn {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: none;
+  border: 0;
+  border-radius: 0.3rem;
+  font-size: 12px;
+}
+.btn-primary{
+	background: #0d6efd;
+}
+.btn-primary:hover{
+  background-color: #0a58ca;
+}
+.btn-success{
+	background: #198754;
+}
+.btn-success:hover{
+	background: #146c43;
+}
+.btn-danger{
+	background: #dc3545;
+}
+.btn-danger:hover{
+  background-color: #b02a37;
+}
+.btn-warning{
+	background:#ffc107;
+}
+.btn-warning:hover{
+	background: #cc9a06;
+}
+.dark{
+	background-color: rgba(32, 33, 36, 0.9);
+}
+.darkLight{
+	background-color: rgba(53, 53, 53, 0.5);
+}
+body {
+  font-family: 'Quicksand', sans-serif;
+  height: 100vh;
+  background-image: url('../assets/sutet.jpg ');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* header */
+header nav {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  background-color: rgba(32, 33, 36, 0.9);
+  padding: 1em;
+}
+.navBrand {
+  display: flex;
+  gap: 1em ;
+  align-items: center;
+  margin-inline: 1em;
+}
+.navBrand img {
+  height: 1.8rem;
+}
+.searchBar form{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.formInput{
+  padding: 0.5rem;
+  background: rgb(53 53 53);
+  outline: 1px solid  rgb(77 88 100);
+  border: none;
+  border-radius: 0.3rem;
+  width: 20rem;
+}
+form>div{
+	margin-bottom: 1rem;
+}
+input:focus{
+  border: none;
+  outline: 1px solid #86b7fe;
+}
+
+.wraper {
+  display: flex;
+  gap: 0 2rem ;
+  padding: 3rem; 
+}
+.wraper .container{
+	flex: 1 0 ;
+}
+section{
+  border-radius: 0.6rem;
+  min-height: 4rem;
+  height: fit-content;
+  flex:  0 0 24rem;
+	margin-bottom: 3rem;
+  
+}   
+section header{
+	text-align: center;
+	padding: 1rem;
+	border-top-right-radius: 0.5rem;
+	border-top-left-radius: 0.5rem;
+}
+section .content{
+	padding:1.5rem;
+	border-bottom-right-radius: 0.5rem;
+	border-bottom-left-radius: 0.5rem;
+  min-height: 10rem;
+}
+.bookList{
+  display: flex;
+  flex-wrap: wrap;
+	gap: 1rem;  
+  max-height: 18rem;
+	overflow-y: auto;
+}
+.book{
+	padding: 1rem;
+	border-radius: 0.5rem;
+  width: 20.4rem;
+}
+.booksInfo{
+  margin-bottom: 1rem;
+}
+.booksAction{
+	display: flex;
+  gap: 0.5rem;
+}
+.containerForm{
+    display: flex;
+    justify-content: center;
+}
+#toast {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #198754;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 16px;
+  position: fixed;
+  z-index: 9999;
+  left: 50%;
+  top: 30px;
+  font-size: 17px;
+}
+#toast.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+@-webkit-keyframes fadein {
+  from {top: 0; opacity: 0;} 
+  to {top: 30px; opacity: 1;}
+}
+@keyframes fadein {
+  from {top: 0; opacity: 0;}
+  to {top: 30px; opacity: 1;}
+}
+@-webkit-keyframes fadeout {
+  from {top: 30px; opacity: 1;} 
+  to {top: 0; opacity: 0;}
+}
+@keyframes fadeout {
+  from {top: 30px; opacity: 1;}
+  to {top: 0; opacity: 0;}
+}
+
+@media screen and (max-width:1400px){
+  main{
+    display: flex;
+    justify-content: center;
+  }
+  .wraper{
+    display: block;
+    font-size: small;
+    margin-block: 1rem;
+    padding: 0;
+    height: 80vh;
+    overflow: auto;
+  }
+  
+  .wraper section{
+    margin-bottom: 1rem;
+    width: 45rem;
+  }
+  
+}
+@media screen and (max-width:768px){
+  .wraper section{
+    margin-bottom: 1rem;
+    width: 24rem;
+  }
+  .navBrand h3{
+    display: none;
+  }
+}
